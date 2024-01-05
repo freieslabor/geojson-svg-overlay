@@ -1,0 +1,8 @@
+*.pyc
+*__pycache__
+.*.swp
+*.egg
+*.egg-info
+/venv*
+/dist
+/map.svg
