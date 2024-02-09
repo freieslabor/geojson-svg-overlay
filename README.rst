@@ -65,6 +65,7 @@ TODO
 
 - offset tuning (minimal map size etc.)
 - output resolution tuning
+- Check if imagemagik is supported version
 
 Honorable Mentions
 ------------------
