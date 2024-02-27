@@ -101,10 +101,10 @@ def main():
     parser = argparse.ArgumentParser(
         description="Overlays geojson polygons on a given SVG map"
     )
-    parser.add_argument("--north", type=float, help="northern limit of map")
-    parser.add_argument("--east", type=float, help="eastern limit of map")
-    parser.add_argument("--south", type=float, help="southern limit of map")
-    parser.add_argument("--west", type=float, help="western limit of map")
+    parser.add_argument("--north", type=float, required=True, help="northern limit of map")
+    parser.add_argument("--east", type=float, required=True, help="eastern limit of map")
+    parser.add_argument("--south", type=float, required=True, help="southern limit of map")
+    parser.add_argument("--west", type=float, required=True, help="western limit of map")
     parser.add_argument(
         "--map", default="map.svg", help="SVG map template (default: %(default)s)"
     )
