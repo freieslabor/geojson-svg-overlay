@@ -34,7 +34,7 @@ Installation
 .. code-block:: bash
 
    $ # system dependencies
-   $ sudo apt install imagemagick python3-venv
+   $ sudo apt install python3-venv
 
    $ # install geojson-svg-overlay
    $ python3 -m venv venv
@@ -59,13 +59,6 @@ Assuming `wget` and `jq` are installed, geojson-svg-overlay could be used like t
    $ source venv/bin/activate
    (venv) $ # run geojson-svg-overlay
    (venv) geojson-svg-overlay --north 55.1 --south 47.2 --west 5.5 --east 15.5 dwd.geojson out.png
-
-TODO
-----
-
-- offset tuning (minimal map size etc.)
-- output resolution tuning
-- Check if imagemagik is supported version
 
 Honorable Mentions
 ------------------

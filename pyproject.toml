@@ -16,6 +16,7 @@ license = { file="LICENSE" }
 requires-python = ">=3.8"
 dependencies = [
     "geojson",
+    "cairosvg",
 ]
 dynamic = ["version"]  # via setuptools_scm
 
