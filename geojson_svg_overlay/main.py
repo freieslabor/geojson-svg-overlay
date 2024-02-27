@@ -64,11 +64,13 @@ class GeoJsonSVGOverlay:
     def get_feature_svg_coords(self, geojson_feature):
         """Returns geo coordinates for given feature with given geo coordinates."""
         # expect only a single entry in coordinates
-        [gj_coords] = geojson_feature["geometry"]["coordinates"]
-        for x, y in gj_coords:
-            svg_x = self.map_range(x, *self.geo_coord_x, 0, self.template_width)
-            svg_y = self.map_range(y, *self.geo_coord_y, 0, self.template_height)
-            yield svg_x, svg_y
+        gj_coords = geojson_feature["geometry"]["coordinates"]
+
+        for gj_coord in gj_coords:
+            for x, y in gj_coord:
+                svg_x = self.map_range(x, *self.geo_coord_x, 0, self.template_width)
+                svg_y = self.map_range(y, *self.geo_coord_y, 0, self.template_height)
+                yield svg_x, svg_y
 
     def get_paths_for_features(self):
         for geojson_feature in self.geojson["features"]:
