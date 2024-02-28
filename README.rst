@@ -39,7 +39,7 @@ Installation
    $ # install geojson-svg-overlay
    $ python3 -m venv venv
    $ source venv/bin/activate
-   (venv) $ pip install git+ssh://git@github.com/freieslabor/geojson-svg-overlay.git
+   (venv) $ pip install git+https://github.com/freieslabor/geojson-svg-overlay.git
 
 
 Usage example
