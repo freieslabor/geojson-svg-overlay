@@ -81,7 +81,9 @@ class GeoJsonSVGOverlay:
             # add first coordinate as final one to close the path
             svg_coords.append(svg_coords[0])
 
-            yield f'<path class="geojson-area" style="fill: red; fill-opacity: 0.6;" d="M {" L ".join(svg_coords)} Z" />'
+            color = geojson_feature["properties"]["fillColor"]
+
+            yield f'<path class="geojson-area" style="fill: {color}; fill-opacity: 0.6;" d="M {" L ".join(svg_coords)} Z" />'
 
     def overlay_map(self, **kwargs):
         with tempfile.NamedTemporaryFile() as temp:
